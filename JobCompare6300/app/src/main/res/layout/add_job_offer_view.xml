@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddJobView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/offerViewTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#8CB160"
+            android:ems="10"
+            android:text="Add New Offer"
+            android:textAlignment="center"
+            android:textColor="#FDFDFD"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/offerEnterNewOfferButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="New Job Offer"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/offerCompareWithCurrentButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="Compare with Current"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/offerViewSubtitleText"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:ems="10"-->
+<!--                android:textAlignment="viewStart"-->
+<!--                android:textSize="20sp" />-->
+<!--        </LinearLayout>-->
+
+        <TableLayout
+            android:id="@+id/job_offer_table"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="visible">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#CAC8C8">
+
+                <TextView
+                    android:id="@+id/offerTableTextTop"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:ems="10"
+                    android:text="Attribute"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerTableValueTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:ems="10"
+                    android:text="Value"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/offerTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Title" />
+
+                <EditText
+                    android:id="@+id/offerTitleValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/offerCompanyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="Company" />
+
+                <EditText
+                    android:id="@+id/offerCompanyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/offerLocation1Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="Location State" />
+
+                <EditText
+                    android:id="@+id/offerLocation1Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/offerLocation2Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="Location City" />
+
+                <EditText
+                    android:id="@+id/offerLocation2Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/offerCostLivingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="Cost of Living" />
+
+                <EditText
+                    android:id="@+id/offerCostLivingValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number|numberDecimal" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/offerYearlySalaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="Yearly Salary" />
+
+                <EditText
+                    android:id="@+id/offerYearlySalaryValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number|numberDecimal" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/offerYearlyBonusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="Yearly Bonus" />
+
+                <EditText
+                    android:id="@+id/offerYearlyBonusValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number|numberDecimal" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/offerRetireBenefitText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="Retirement Benefits" />
+
+                <EditText
+                    android:id="@+id/offerRetireBenefitValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number|numberDecimal" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/offerRelocationStipendText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="Relocation Stipend" />
+
+                <EditText
+                    android:id="@+id/offerRelocationStipendValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberSigned|numberDecimal" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/offerRSUAwardText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="RSU Award" />
+
+                <EditText
+                    android:id="@+id/offerRSUAwardValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberSigned|numberDecimal" />
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:id="@+id/new_offer_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/offerBackButton"
+                android:layout_width="155dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+                android:text="Back" />
+
+            <Button
+                android:id="@+id/offerSaveOfferButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="20"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="20dp"
+                android:text="Save" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/compareJobLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/offerViewCompareResultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#97BA6E"
+                android:ems="10"
+                android:text="Comparison Results"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/job_compare_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/offerCompareEmptyText"
+                    android:layout_width="124dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#764AB5"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/offerCompareCurrentTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#764AB5"
+                    android:ems="10"
+                    android:text="Current Job"
+                    android:textAlignment="center"
+                    android:textColor="#EEE7F3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerCompareOfferTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#764AB5"
+                    android:ems="10"
+                    android:text="This Offer"
+                    android:textAlignment="center"
+                    android:textColor="#FFEEE7F3"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/offerCompareTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#E3E0E0"
+                    android:textStyle="bold"
+                    android:ems="10"
+                    android:text="Title"
+                     />
+
+                <TextView
+                    android:id="@+id/offerCompareTitleCurrent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#EFE5F6"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/offerCompareTitleOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:ems="10"
+                    android:background="#EFE5F6"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/offerCompareCompanyNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#E3E0E0"
+                    android:ems="10"
+                    android:text="Company Name"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerCompareCompanyNameCurrent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#EFE5F6"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/offerCompareCompanyNameOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:ems="10"
+                    android:background="#EFE5F6"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/offerCompareLocation1Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#E3E0E0"
+                    android:ems="10"
+                    android:text="Location State"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerCompareLocation1Current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+
+                <TextView
+                    android:id="@+id/offerCompareLocation1Offer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/offerCompareLocation2Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#E3E0E0"
+                    android:ems="10"
+                    android:text="Location City"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerCompareLocation2Current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+
+                <TextView
+                    android:id="@+id/offerCompareLocation2Offer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/offerCompareSalaryAdjustedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#E3E0E0"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Adjusted Salary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerCompareSalaryAdjustedCurrent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+
+                <TextView
+                    android:id="@+id/offerCompareSalaryAdjustedOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/offerCompareBonusAdjustedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#E3E0E0"
+                    android:ems="10"
+                    android:text="Adjusted Bonus"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerCompareBonusAdjustedCurrent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+
+                <TextView
+                    android:id="@+id/offerCompareBonusAdjustedOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/offerCompareRetireBenefitText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#E3E0E0"
+                    android:ems="10"
+                    android:text="Retirement Benefits"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerCompareRetireBenefitCurrent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+
+                <TextView
+                    android:id="@+id/offerCompareRetireBenefitOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/offerCompareRelocationStipendText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#E3E0E0"
+                    android:ems="10"
+                    android:text="Relocation Stipend"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerCompareRelocationStipendCurrent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+
+                <TextView
+                    android:id="@+id/offerCompareRelocationStipendOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/offerCompareRSUAwardText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#E3E0E0"
+                    android:ems="10"
+                    android:text="RSU Award"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerCompareRSUAwardCurrent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+
+                <TextView
+                    android:id="@+id/offerCompareRSUAwardOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:background="#EFE5F6"
+                    android:layout_weight="3"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</ScrollView>
